@@ -12,7 +12,7 @@ body {
   z-index: -10;
   position: fixed;
   inset: 0;
-  background-image: url('img/background.jpg');
+  background-image: url('/img/background.jpg');
   background-size: cover;
   background-position: center;
   animation: slowPan 35s ease-in-out infinite alternate;
