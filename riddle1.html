@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riddle 1</title>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/riddle.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+  <div class="background">
+    <div class="ocean-overlay"></div>
+  </div>
+  <div class="overlay">
+    <div id="title" class="title">
+        Das etwas andere Hörbuch
+    </div>
+    <div class="story-box">
+      <h2>Wie haben wir uns kennengelernt?</h2>
+      <div class="field-label">1. Wo genau?
+        <input id="q1" type="text"></div>
+      <div class="field-label">2. Wer war dabei?
+        <input id="q2" type="text"></div>
+      <div class="field-label">3. Welches Outfit hattest du an?
+        <input id="q3" type="text"></div>
+      <div class="field-label">4. Was wurde mitgebracht?
+        <input id="q4" type="text"></div>
+      <div class="field-label">5. Welche Antwort hast du letztlich auf unsere Frage gegeben?
+        <input id="q5" type="text"></div>
+      <div class="button-container">
+        <button onclick="checkAnswers()">Mal Schauen</button>
+      </div>
+      <div id="menuBtn" class="button-container">
+        <button id="check" onclick="goToChapterMenu()" hidden>Zu den Kapiteln</button>
+      </div>
+    </div>
+  </div>
+
+<div id="hintModal" class="modal">
+  <div class="modal-content">
+
+    <h3>Hinweis gefällig?</h3>
+
+    <p id="challengeQuestion">
+      Löse die Zusatzaufgabe, um den Hinweis freizuschalten.
+    </p>
+    <input
+      id="challengeInput"
+      type="text"
+      placeholder="Deine Antwort..."
+      style="margin-bottom: 10px;"
+    >
+    <div
+      id="hintText"
+      class="hint-box"
+      style="display:none;"
+    ></div>
+    <div class="button-container" style="margin-top:10px;">
+      <button onclick="submitChallenge()">
+        Absenden
+      </button>
+    </div>
+    <div class="button-container">
+      <button onclick="closeHintModal()">
+        Schließen
+      </button>
+    </div>
+  </div>
+</div>
+
+  <audio autoplay loop>
+    <source src="wind-and-sea.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="js/global.js"></script>
+  <script src="js/riddle1.js"></script>
+
+</body>
+</html>

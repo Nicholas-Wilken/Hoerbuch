@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riddle 2</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/riddle.css">
+  <link rel="stylesheet" href="css/ui.css">
+
+<style>
+.modal,.modal-content, button, input { pointer-events: auto;}
+
+#viewport {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  touch-action: none;
+  background: black;
+}
+
+#world {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5016px;
+  height: 3344px;
+  transform-origin: 0 0;
+  cursor: grab;
+}
+
+.floating-images {
+    position: absolute;
+    opacity: 0.7;
+    inset: 0;
+  }
+
+  .floating-img {
+    position: absolute;
+    width: 30px;
+    user-select: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.75;
+    transform: scale(1);
+    pointer-events: auto; /* wichtig für Klick */
+  }
+  .floating-img.found {
+    opacity: 1;
+    transform: scale(8);
+  }
+  .img1 {
+    top: 630px;
+    left: 860px;
+  } 
+
+  .img2 {
+    top: 1230px;
+    left: 3740px;
+  }
+
+  .img3 {
+    top: 1290px;
+    left: 755px;
+  }
+
+  .img4 {
+    top: 1136px;
+    left: 4631px;
+  }
+    .img5 {
+    top: 630px;
+    left: 3610px;
+  }
+      .img6 {
+    top: 1250px;
+    left: 2630px;
+  }
+      .img7 {
+    top: 2590px;
+    left: 550px;
+  }
+      .img10 {
+  left: 30px;
+  bottom: 30px;
+  }
+</style>
+
+</head>
+
+<body>
+
+<div id="viewport">
+  <div id="world">
+    <img src="img/background.jpg" id="bgImage">
+          <div class="floating-images">
+            <img src="img/img1.png" class="floating-img img1" data-id="1">
+            <img src="img/img2.png" class="floating-img img2" data-id="2">
+            <img src="img/img3.png" class="floating-img img3" data-id="3">
+            <img src="img/img4.png" class="floating-img img4" data-id="4">
+            <img src="img/img7.png" class="floating-img img7" data-id="7">
+            <img src="img/img6.png" class="floating-img img6" data-id="6">
+            <img src="img/img5.png" class="floating-img img5" data-id="5">
+          </div>
+  </div>
+  <div class="overlay" id="overlay">
+    <div id="sideCharacter" class="sideCharacter hidden">
+      <img src="img/golem.png" alt="Character">
+    </div>
+    <div id="title" class="title">
+      Das etwas andere Hörbuch
+    </div>
+    <div class="golem-box hidden" id="golem-box">
+      <div id="storyText" class="story-text hidden"></div>
+      <div id="readyButton" class="button-container hidden">
+        <button id="btnAll"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<audio autoplay loop>
+  <source src="wind-and-sea.mp3" type="audio/mpeg">
+</audio>
+  <script src="js/engine.js"></script>
+  <script src="js/globalnewengine.js"></script>
+  <script src="js/riddle2newengine.js"></script>
+</body>
+</html>

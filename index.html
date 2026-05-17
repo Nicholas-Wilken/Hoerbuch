@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Das etwas andere Hörbuch</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="background">
+    <div class="ocean-overlay"></div>
+  </div>
+  <div class="overlay">
+    <div id="sideCharacter" class="sideCharacter hidden">
+      <img src="img/golem.png" alt="Character">
+    </div>
+  <!-- TITLE (start hidden) -->
+    <div id="title" class="title">
+      Das etwas andere Hörbuch
+    </div>
+  <!-- STORY -->
+    <div id="storyBox" class="story-box">
+      <div id="storyText" class="story-text"></div>
+      <div id="readyButton" class="button-container hidden">
+        <button onclick="showTitle()">Ich bin bereit</button>
+      </div>
+    </div>
+    <div id="nextButton" class="next-button">
+      <button onclick="nButton()">Los geht's!</button>
+    </div>
+  </div>
+  <!-- AUDIO -->
+  <audio autoplay loop>
+    <source src="wind-and-sea.mp3" type="audio/mpeg">
+  </audio>
+  <!-- SCRIPT -->
+  <script src="js/global.js"> </script>
+  <script src="js/index.js"> </script>
+</body>
+</html>

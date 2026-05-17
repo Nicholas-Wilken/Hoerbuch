@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riddle 3</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/riddle.css">
+    <link rel="stylesheet" href="css/ui.css">
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="overlay" id="overlay">
+      <div id="title" class="title">
+        Das etwas andere Hörbuch
+      </div>
+<!------
+
+      ----->
+      <div class="story-box">
+        <input type="text" id="cityInput"  placeholder="Welcher Ort ist das?">
+      <div class="button-container">
+        <button id="readyButton"></button>
+      </div>
+      <div class="button-container" id="feedback"></div>
+      </div>
+    </div>
+      <div id="viewport" class="map-viewport">
+          <div id="world" class="map-world">
+          <img id="cityImage" src="" alt="Stadtkarte">
+        </div>
+      </div>
+    <div id="hintModal" class="modal">
+      <div class="modal-content">
+        <h3>Hinweis gefällig?</h3>
+        <p id="challengeQuestion">
+          Löse die Zusatzaufgabe, um den Hinweis freizuschalten.
+        </p>
+        <input id="challengeInput" type="text" placeholder="Deine Antwort..." style="margin-bottom: 10px;">
+        <div id="hintText"  class="hint-box"  style="display:none;"></div>
+        <div class="button-container" style="margin-top:10px;">
+          <button onclick="submitChallenge()">
+            Absenden
+          </button>
+        </div>
+        <div class="button-container">
+          <button onclick="closeHintModal()">
+            Schließen
+          </button>
+        </div>
+      </div>
+    </div>
+    <audio autoplay loop>
+      <source src="wind-and-sea.mp3" type="audio/mpeg">
+    </audio>
+    <script src="js/engine.js"></script>
+    <script src="js/globalnewengine.js"></script>
+    <script src="js/riddle3.js"></script>
+  </body>
+</html>
