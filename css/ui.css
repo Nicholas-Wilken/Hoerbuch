@@ -8,11 +8,10 @@ body {
   position: fixed;
 }
 /* ===== BACKGROUND ===== */
-#background {
+.background {
   z-index: -10;
   position: fixed;
   inset: 0;
-  background-image: url('https://github.com/Nicholas-Wilken/Hoerbuch/blob/a7d38a56a9263316efad85ce759b2a3b8ad8f93f/img/background.jpg');
   background-size: cover;
   background-position: center;
   animation: slowPan 35s ease-in-out infinite alternate;
