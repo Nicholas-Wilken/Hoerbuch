@@ -1,0 +1,6 @@
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-family: Georgia, serif;
+  line-height: 1.2;
+  gap: 0px;
+}

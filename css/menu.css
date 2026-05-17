@@ -1,0 +1,83 @@
+h2 {
+  font-size: clamp(1.2rem, 3vw, 2.4rem);
+  font-family: Georgia, serif;
+  line-height: 1;
+  padding: 15px;
+}
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.chapter-card {
+  opacity: 0;
+  margin-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  animation: fadeIn 1s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.chapter-card.locked {
+  opacity: 0.35;
+}
+
+.chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chapter-header h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.chapter-subtitle {
+  opacity: 0.7;
+}
+
+.chapter-buttons {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+
+.chapter-info {
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  display: none;
+  line-height: 1;
+}
+
+.chapter-info.visible {
+  display: block;
+}
+
+@media (max-width: 768px) {
+
+  .story-box {
+    padding: 5px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .chapter-buttons {
+    flex-direction: column;
+  }
+}
