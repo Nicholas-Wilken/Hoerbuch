@@ -8,7 +8,7 @@ body {
   position: fixed;
 }
 /* ===== BACKGROUND ===== */
-.background {
+#background {
   z-index: -10;
   position: fixed;
   inset: 0;
